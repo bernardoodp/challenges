@@ -5,7 +5,7 @@ def isPalindrome(s: str):
     for i in s.lower():
         if i.isalnum():
             b = b + i
-    return s == b[::-1]
+    return b == b[::-1]
         
 
 
