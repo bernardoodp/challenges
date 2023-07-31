@@ -1,14 +1,14 @@
 import re
 
 def isPalindrome(s: str):
-    s = list(re.sub(r'[.,"\'-?:!;]', '', s))
-    reverse = list(reversed(s))
-    if ''.join(s).lower().replace(' ', '') == ''.join(reverse).lower().replace(' ', ''):
-        return True
-    return False
+    b = ''
+    for i in s.lower():
+        if i.isalnum():
+            b = b + i
+    return s == b[::-1]
+        
 
 
-
-print(isPalindrome("race a car"))
+print(isPalindrome("0P"))
 
 
